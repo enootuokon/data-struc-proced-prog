@@ -1,18 +1,43 @@
-ALGORITHM Dot Product
+
+FUNCTION dot_product(v1, v2): INTEGER
 VAR
     v1:= INTEGER
     v2:= INTEGER
     ps:= INTEGER :=0
 BEGIN
-    // Traverse  over each element in the vectors
+   // Traverse  over each element in the vectors
      FOR i FROM 1 TO v1.length DO
         // Check if the length of vector are equal
         IF (v1.length != v2.length) THEN
             return " Vectors must be of same length";
         END_IF
-        ps += v1[i] * v2[i];  
+        ps += v1[i] * v2[i]; 
     END_FOR
     return ps
-
-
 END
+
+
+FUNCTION checkOrthogonal(n, vectorPairs) : INTEGER
+VAR
+    // n is the number of vector pairs 
+    n: = INTEGER := 2
+    //vectorPairs is an array with 2 rows where each represents one vector
+    vectorPairs : ARRAY_OF INTEGER[length];
+BEGIN
+    // traverse through each vector pair
+    FOR i FROM 1 TO n DO
+    // extracting vector from the pairs
+    v1 = vectorPairs[i][1]
+    v2 = vectorPairs[i][2]
+    END_FOR
+    // calculate the dot product by calling dot_product procedure 
+    dotprodct = dot_product(v1,v2)
+    //check if orthogonal
+    IF () THEN
+        
+    IF (dotprodct = 0) THEN
+        RETURN `Vectors in pairs ${i} are orthogonal.`
+    ELSE
+        RETURN `Vectors in pairs ${i} are not orthogonal.`
+    END_IF
+    
