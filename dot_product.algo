@@ -1,0 +1,18 @@
+ALGORITHM Dot Product
+VAR
+    v1:= INTEGER
+    v2:= INTEGER
+    ps:= INTEGER :=0
+BEGIN
+    // Traverse  over each element in the vectors
+     FOR i FROM 1 TO v1.length DO
+        // Check if the length of vector are equal
+        IF (v1.length != v2.length) THEN
+            return " Vectors must be of same length";
+        END_IF
+        ps += v1[i] * v2[i];  
+    END_FOR
+    return ps
+
+
+END
